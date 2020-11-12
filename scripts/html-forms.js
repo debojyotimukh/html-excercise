@@ -14,11 +14,20 @@ salary.addEventListener('input', function () {
     output.textContent = salary.value;
 });
 
-const email=document.querySelector('#email');
-const emailError=document.querySelector('.email-class');
-email.addEventListener('input',function () {
-    let emailRegex=RegExp('^[\\w-+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$');
-    if(emailRegex.test(email.value))
-        emailError.textContent="";
-    else emailError.textContent=" Email is incorrect";
+const email = document.querySelector('#email');
+const emailError = document.querySelector('.email-class');
+email.addEventListener('input', function () {
+    let emailRegex = RegExp('^[\\w-+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$');
+    if (emailRegex.test(email.value))
+        emailError.textContent = "";
+    else emailError.textContent = " Email is incorrect";
+});
+
+const phone=document.querySelector('#tel');
+const phoneError=document.querySelector('.phone-class');
+phone.addEventListener('input',function () {
+   let phoneRegex=RegExp('^([0-9]{2})+([ ])+([0-9]{10})$');
+   if(phoneRegex.test(phone.value))
+        phoneError.textContent="";
+    else phoneError.textContent=" Phone is incorrect";
 });
