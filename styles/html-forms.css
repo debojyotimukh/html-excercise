@@ -23,7 +23,8 @@ form {
 }
 
 div {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,6 +33,7 @@ div {
 label, input, button {
     font-size: 16px;
     line-height: 1.5;
+    
 }
 
 label {
@@ -53,4 +55,34 @@ error-output {
     font-size: 12px;
     font-style: italic;
     color: red;
+}
+
+@media screen and (min-width: 240px) and (max-width: 375px) {
+    .headerContainer {
+        margin-bottom: 5px;
+    }
+
+    body {
+        height: 100%;
+        padding: 1em;
+    }
+    input {
+        width: 50%;
+        font-size: 16px;
+        line-height: 1.2;
+        margin-top: 7px;
+        margin-bottom: 5px;
+        
+    }
+    label {
+        font-size: 15px;
+    }
+
+    div {
+        margin-bottom: 1pt;
+    }
+    
+    error-output {
+        font-size: 10px;      
+    }
 }
